@@ -1,16 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-body {
-    margin: 0px;
-    font-family: 'Montserrat', sans-serif;
-    display: grid;
-    grid-template-rows: 51px auto;
+:root {
+    --text-color: #fff;
 }
 
-a { text-decoration: none; }
-ul { list-style-type: none; float: inline; }
-ul li { display: inline; }
-ul li a { color: #fff; padding: 15px; }
+body, html { height: 100%;}
+body {
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    display: grid;
+    grid-template-rows: auto 50px;
+    grid-template-columns: 17% auto;
+    grid-template-areas:
+        "sidebar right"
+        "footer footer";
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    float: inline;
+}
+ul li {
+    display: inline;
+}
+ul li a {
+    color: #fff;
+    padding: 15px;
+}
 
 #logo {
     padding: 15px;
@@ -43,7 +62,9 @@ section#hero {
 }
 
 #content p {
-    color: #fff;
+    color: var(--text-color);
+    padding-right: 1em;
+    text-align: justify;
 }
 
 img {
@@ -53,8 +74,26 @@ img {
 }
 
 #mountain {
-    object-fit: cover;  /* to preserve aspect ratio */
+    object-fit: cover; /* to preserve aspect ratio */
     border-radius: 50%;
     width: 200px;
     height: 200px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #1c9090;
+    color: var(--text-color);
+    padding: 1em;
+}
+
+.main {
+    grid-area: right;
+    grid-template-rows: 51px fit-content(30%);
+    display: grid;
+}
+
+footer {
+    grid-area: footer;
+    background: lightgrey;
 }
