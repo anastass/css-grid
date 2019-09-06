@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <title>Document</title>
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
         <style>
+            html, body {
+                font-family: 'Raleway', sans-serif;    
+            }
+
             /* flexbox */
             /* .content {
                 display: flex;
@@ -13,8 +18,34 @@
                 flex-wrap: nowrap;
             } */
 
-            .content {
+            #main {
                 display: grid;
+                grid-template-columns: 17% auto;
+                grid-template-rows: auto 50px;
+                grid-template-areas: "aside content" "footer footer";
+            }
+
+            .aside {
+                grid-area: aside;
+                background: #feb249;
+                margin-right: 0.8em;
+                color: #002447;
+                text-align: center;
+            }
+
+            footer {
+                grid-area: footer;
+                background: grey;
+                color: white;
+                text-align: center;
+                padding-top: 0.5em;
+                padding-bottom: 0.2em;
+                margin-top: 0.5em;
+            }
+
+            .content {
+                grid-area: content;
+                display: inline-grid;
                 /* grid-template-columns: repeat(4, 1fr); */
                 grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
                 grid-gap: 0.3em;
@@ -24,9 +55,13 @@
                 color: white;
                 font-size: 2em;
                 font-weight: bold;
-                text-align: center;
                 height: 150px;
                 width: 100px;
+
+                /* center number */
+                display:flex;
+                align-items: center;
+                justify-content: center;
             }
 
             /* 
@@ -68,15 +103,19 @@
         </style>
     </head>
     <body>
-        <div class="content">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
-            <div class="box">7</div>
-            <div class="box">8</div>
+        <div id="main">
+            <div class="aside">Some text</div>
+            <div class="content">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+                <div class="box">7</div>
+                <div class="box">8</div>
+            </div>
+            <footer>CSSGrid demo</footer>
         </div>
     </body>
 </html>
