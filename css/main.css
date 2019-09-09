@@ -4,7 +4,10 @@
     --text-color: #fff;
 }
 
-body, html { height: 100%;}
+body,
+html {
+    height: 100%;
+}
 body {
     margin: 0px;
     font-family: "Montserrat", sans-serif;
@@ -96,4 +99,37 @@ img {
 footer {
     grid-area: footer;
     background: lightgrey;
+}
+
+#features {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    text-align: center;
+    /* 
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+
+        grid-column-gap: 10px;
+        grid-row-gap: 10px; 
+    */
+}
+
+#features i {
+    font-size: 2em;
+    /* color: #1c9090; */
+}
+
+ul#features {
+    padding: 0;
+    margin: 0;
+}
+
+ul#features li {
+    background: lightgray;
+    padding: 1em;
+}
+
+ul#features li p {
+    color: #4c4c4c
+    padding: 1em;
 }
