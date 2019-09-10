@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Positioning</title>
+        <link rel="stylesheet" href="css/positioning.css">
+    </head>
+    <body>
+        <h1>Positioning</h1>
+
+        <dl>
+            <dt>inline</dt>
+            <dd>Displays an element as an inline element (like &lth;span>). Any height and width properties will have no effect</dd>
+            <dt>block</dt>
+            <dd>Displays an element as a block element (like &lth;p>). It starts on a new line, and takes up the whole width</dd>
+            <dt>contents</dt>
+            <dd>Makes the container disappear, making the child elements children of the element the next level up in the DOM</dd>
+            <dt>flex</dt>
+            <dd>Displays an element as a block-level flex container</dd>
+            <dt>grid</dt>
+            <dd>Displays an element as a block-level grid container</dd>
+            <dt>inline-block</dt>
+            <dd>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</dd>
+            <dt>none</dt>
+            <dd>The element is completely removed</dd>
+            <dt>initial</dt>
+            <dd>Sets this property to its default value</dd>
+            <dt>inherit</dt>
+            <dd>	Inherits this property from its parent element</dd>
+        </dl>
+
+        <h2>Span - default behaviour</h2>
+        <span class="box box-attributes">1</span>
+        <span class="box box-attributes">2</span>
+        <span class="box box-attributes">3</span>
+        <hr>
+
+        <h2>Span - inline-block (element)</h2>
+        <span class="box box-attributes" style="display: inline-block">1</span>
+        <span class="box box-attributes" style="display: inline-block">2</span>
+        <span class="box box-attributes" style="display: inline-block">3</span>
+        <hr>
+
+        <h2>Span - display: block (element), flex (container)</h2>
+        <div style="display: flex">
+            <span class="box box-attributes" style="display: block">1</span>
+            <span class="box box-attributes" style="display: block">2</span>
+            <span class="box box-attributes" style="display: block">3</span>
+        </div>
+        <hr>
+
+        <h2>Div - default behaviour</h2>
+        <div class="box box-attributes">1</div>
+        <div class="box box-attributes">2</div>
+        <div class="box box-attributes">3</div>
+        <hr>
+
+        <h2>Div - display flex</h2>
+        <div style="display: flex">
+            <div class="box box-attributes">1</div>
+            <div class="box box-attributes">2</div>
+            <div class="box box-attributes">3</div>
+        </div>
+        <hr>
+
+        <h2>Div - display grid, justify-content left</h2>
+        <div style="display: grid; grid-template-columns: repeat(2, auto); justify-content:left;">
+            <div class="box box-attributes">1</div>
+            <div class="box box-attributes">2</div>
+            <div class="box box-attributes">3</div>
+        </div>
+
+    </body>
+</html>
