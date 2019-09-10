@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Positioning</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/positioning1.css" />
+    </head>
+    <body>
+        <div class="box blueBox"><span class="label">fixed</span></div>
+        <div class="container">
+            <div class="box brownBox"><span class="label">absolute</span></div>
+        </div>
+        <div class="box originalPosition"><span class="label">original position</span></div>
+        <div class="box lightblueBox"><span class="label">relative</span></div>
+        <div class="box greenBox"></div>
+
+        <h1>Understanding CSS Positioning</h1>
+        <p>
+            <em>Fixed positioning</em> 'fixes' the position of an element
+            relative to the browser window. The element always stays fixec in
+            place, even when scrolling.
+        </p>
+        <p>
+            <em>Absolute positioning</em> takes an element out of document flow,
+            meaning the browser act as if element has no width and height, and
+            the other elements on the page move up as if it was never there. The
+            position of the element is then fixed relative to the top level
+            container, or the closest parent with set positioning.
+        </p>
+        <p><em>Relative positioning</em> sets the position relative to its original position. The element's original width and height is retained in document flow and other elements behave as if it was in the original position.</p>
+    </body>
+</html>
