@@ -28,7 +28,7 @@ em {
 .originalPosition {
     border: 1px solid red;
     position: absolute;
-    z-index: -1
+    z-index: -1;
 }
 
 .lightblueBox {
@@ -50,7 +50,7 @@ em {
 }
 
 .container {
-    background: rgba(0, 0, 0, .4);
+    background: rgba(0, 0, 0, 0.4);
     height: 300px;
     width: 300px;
     border: 1px solid silver;
@@ -67,4 +67,39 @@ em {
 
 span {
     padding: 0px 5px;
+}
+
+// .case1 {
+//     visibility: hidden;
+// }
+
+// .case2 {
+//     visibility: hidden;
+// }
+
+// .case3 {
+//     visibility: hidden;
+// }
+
+$top: 50px;
+$left: 50px;
+$offset: 50px;
+
+.container1 {
+    @extend .container;
+    top: 700px;
+}
+
+.boxOne {
+    position: absolute;
+    background-color: #7700b3;
+    top: $top;
+    left: $left;
+}
+
+.boxTwo {
+    position: absolute;
+    background-color: #24b300;
+    top: $top + $offset;
+    left: $left + $offset;
 }

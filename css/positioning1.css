@@ -49,7 +49,7 @@ em {
   background-color: #5b8054;
 }
 
-.container {
+.container, .container1 {
   background: rgba(0, 0, 0, 0.4);
   height: 300px;
   width: 300px;
@@ -67,5 +67,23 @@ em {
 
 span {
   padding: 0px 5px;
+}
+
+.container1 {
+  top: 700px;
+}
+
+.boxOne {
+  position: absolute;
+  background-color: #7700b3;
+  top: 50px;
+  left: 50px;
+}
+
+.boxTwo {
+  position: absolute;
+  background-color: #24b300;
+  top: 100px;
+  left: 100px;
 }
 /*# sourceMappingURL=positioning1.css.map */
