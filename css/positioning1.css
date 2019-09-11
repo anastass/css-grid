@@ -49,7 +49,7 @@ em {
   background-color: #5b8054;
 }
 
-.container, .container1 {
+.container, .container1, .container3, .container2 {
   background: rgba(0, 0, 0, 0.4);
   height: 300px;
   width: 300px;
@@ -69,8 +69,8 @@ span {
   padding: 0px 5px;
 }
 
-.container1 {
-  top: 700px;
+.container1, .container3 {
+  top: 800px;
 }
 
 .boxOne {
@@ -85,5 +85,70 @@ span {
   background-color: #24b300;
   top: 100px;
   left: 100px;
+}
+
+.container2 {
+  height: 600px;
+  width: 500px;
+  top: 1110px;
+}
+
+.boxThree {
+  background-color: #7700b3;
+  float: left;
+  margin-right: 10px;
+}
+
+.boxFour {
+  background-color: #24b300;
+  float: left;
+  margin-right: 10px;
+}
+
+.container2 p {
+  clear: left;
+}
+
+.align-bottom {
+  float: right;
+}
+
+/*
+    For auto center horizontaly use:
+    
+        .blueBox {
+            matgin: 0 auto;
+        }
+
+    Note: The element should have a width property set.
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+    To center vertically use: 
+
+        .blueBox {
+            position: absolute;
+            top: 50%;               // the upper line of the element lies at the center
+            margin-top: -50px;      // adjust with half of the height
+        }
+*/
+.container3 {
+  left: -300px;
+}
+
+.boxFive {
+  background-color: #24b300;
+  margin: 0 auto;
+}
+
+.container4 {
+  position: absolute;
+  top: 50%;
+  margin-top: -75px;
+  left: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=positioning1.css.map */

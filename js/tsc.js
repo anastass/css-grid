@@ -1,4 +1,3 @@
-// change visibility
 function toggle(button_id, selector) {
     var sel = document.querySelectorAll(selector);
     sel.forEach(function (item) {
@@ -14,7 +13,6 @@ function toggle(button_id, selector) {
         document.getElementById(button_id).innerText = label;
     });
 }
-// swap boxes
 function swap() {
     var boxes = document.querySelectorAll(".container1 div");
     var z0Index = boxes[0].getAttribute("style");
@@ -22,3 +20,10 @@ function swap() {
     boxes[0].setAttribute("style", z1Index);
     boxes[1].setAttribute("style", z0Index);
 }
+var float = function () {
+    var el = document.querySelector(".container2 p");
+    var style = el.getAttribute("style") || "clear none";
+    style = style === "clear:left" ? "clear:none" : "clear:left";
+    el.setAttribute("style", style);
+};
+//# sourceMappingURL=tsc.js.map

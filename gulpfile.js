@@ -1,12 +1,15 @@
-var gulp = require('gulp');
-var browserSynck = require('browser-sync').create();
+var gulp = require("gulp");
+var browserSynck = require("browser-sync").create();
 
-gulp.task('browser-sync', function() {
+gulp.task("browser-sync", function() {
     browserSynck.init({
         server: {
             baseDir: "./"
         }
     });
 
-    gulp.watch(["./*.html", "./css/*.css"]).on("change", browserSynck.reload);
+    gulp.watch(["./*.html", "./css/*.css", "./js/*.js"]).on(
+        "change",
+        browserSynck.reload
+    );
 });

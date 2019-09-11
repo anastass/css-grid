@@ -51,6 +51,33 @@
             positioning for z-index to work.
         </p>
 
+        <!-- <p>
+            <em>Float left</em> removes an element from normal document flow. It
+            then takes that element and pushes it to the far left as possible.
+            Other elements will move up as far possible to flow arround the
+            element and take its original space.
+        </p>
+
+        <p>
+            <em>Float right</em> removes an element from normal document flow.
+            It then takes that element and pushes it to the far right as
+            possible. Other elements will move up as far possible to flow
+            arround the element and take its original space.
+        </p> -->
+
+        <p>
+            <em>Floating</em> positions an element according to document flow,
+            and then moves is to the far left (<em>float left</em>) or right
+            (<em>float right</em>) as possible. Elements flollowing a floated
+            element will move up as far as possible to flow arround the element
+            and take its original space.
+        </p>
+
+        <p>
+            The <em>clear</em> property specifies on which sides of an element
+            floating elements are not allowed to float.
+        </p>
+
         <div style="margin-top: 5px; float: right">
             <button id="b1" onclick="toggle('b1', '.case1')">Hide fixed</button>
             <button id="b2" onclick="toggle('b2', '.case2')">
@@ -62,6 +89,12 @@
             <button id="b4" onclick="toggle('b4', '.case4')">
                 Hide z-index
             </button>
+            <button id="b5" onclick="toggle('b5', '.case5')">
+                Hide float
+            </button>
+            <button id="b6" onclick="toggle('b6', '.case6')">
+                Hide centered
+            </button>
         </div>
 
         <div class="container1 case4" onclick="swap()">
@@ -71,9 +104,42 @@
             <div class="box boxTwo" style="z-index:2">
                 <span class="label">box two</span>
             </div>
+            <span class="label align-bottom">Click me</span>
         </div>
 
-        <script src="js/main.js"></script>
-        <!-- <script src="js/main2.js"></script> -->
+        <div class="container2 case5" onclick="float()">
+            <div class="box boxThree">
+                <span class="label">box three</span>
+            </div>
+            <div class="box boxFour">
+                <span class="label">box four</span>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Lobortis feugiat vivamus at augue. Risus nec feugiat in
+                fermentum posuere urna. Morbi quis commodo odio aenean sed
+                adipiscing diam donec adipiscing. Magna etiam tempor orci eu.
+                Amet massa vitae tortor condimentum lacinia. Sit amet luctus
+                venenatis lectus magna fringilla urna. Sit amet mauris commodo
+                quis. Nulla facilisi etiam dignissim diam quis. Porta nibh
+                venenatis cras sed felis. Proin libero nunc consequat interdum
+                varius sit amet mattis. Libero volutpat sed cras ornare arcu
+                dui. Feugiat in fermentum posuere urna nec tincidunt praesent
+                semper. Vel elit scelerisque mauris pellentesque.
+            </p>
+            <span class="label align-bottom">Click me</span>
+        </div>
+
+        <div class="container3 case6">
+            <div class="container4">
+                <div class="box boxFive">
+                    <span class="label">centered</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="js/main.js"></script> -->
+        <script src="js/tsc.js"></script>
     </body>
 </html>

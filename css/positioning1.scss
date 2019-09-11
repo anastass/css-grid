@@ -84,10 +84,11 @@ span {
 $top: 50px;
 $left: 50px;
 $offset: 50px;
+$container-top: 800px;
 
 .container1 {
     @extend .container;
-    top: 700px;
+    top: $container-top;
 }
 
 .boxOne {
@@ -102,4 +103,72 @@ $offset: 50px;
     background-color: #24b300;
     top: $top + $offset;
     left: $left + $offset;
+}
+
+.container2 {
+    @extend .container;
+    height: 600px;
+    width: 500px;
+    top: $container-top + 310px;
+}
+
+.boxThree {
+    background-color: #7700b3;
+    float: left;
+    margin-right: 10px;
+}
+
+.boxFour {
+    background-color: #24b300;
+    float: left;
+    margin-right: 10px;
+}
+
+.container2 p {
+    clear: left;
+}
+
+.align-bottom {
+    float: right;
+}
+
+/*
+    For auto center horizontaly use:
+    
+        .blueBox {
+            matgin: 0 auto;
+        }
+
+    Note: The element should have a width property set.
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+    To center vertically use: 
+
+        .blueBox {
+            position: absolute;
+            top: 50%;               // the upper line of the element lies at the center
+            margin-top: -50px;      // adjust with half of the height
+        }
+*/
+
+.container3 {
+    @extend .container1;
+    left: -300px;
+}
+
+.boxFive {
+    background-color: #24b300;
+    margin: 0 auto;
+}
+
+.container4 {
+    position: absolute;
+    top: 50%;
+    margin-top: -75px; // half of the box height
+    left: 0;
+    width: 100%;
 }

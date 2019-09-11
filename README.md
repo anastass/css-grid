@@ -10,5 +10,7 @@ Base on Pluralsight course **Building Layouts with the CSS Grid** by Gary Simon
 ## Run
 
 > $ node_modules\.bin\gulp browser-sync
+>    or
+> $ npm run serve
 
 > Note: *Start SCSS live compiler in VSCode when using SCSS files or create a task in gulp.*

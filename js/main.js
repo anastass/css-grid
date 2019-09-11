@@ -22,3 +22,9 @@ const swap = function() {
     boxes[0].style.zIndex = z1Index;
     boxes[1].style.zIndex = z0Index;
 };
+
+// handle float
+const float = function() {
+    const el = document.querySelector(".container2 p");
+    el.style.clear = el.style.clear == "left" ? "none" : "left";
+};
