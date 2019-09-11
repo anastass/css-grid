@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    height: 240px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: 60px;
+    grid-gap: 10px;
+}
+
+.wrapper>div {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ffa94d;
+    border-radius: 5px;
+    background-color: #ffd8a8;
+    padding: 1em;
+    color: #d9480f;
+}
