@@ -156,6 +156,24 @@
                 background: hotpink;
             }
 
+            /*
+            Flex property is a shorthand for the flex-grow, flex-shrink, and the flex-basis (default: flex: 0 1 auto;)
+                flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+
+            flex-grow:   A number specifying how much the item will grow relative to the rest of the flexible items.
+            flex-shrink: A number specifying how much the item will shrink relative to the rest of the flexible items
+            flex-basis:  The length of the item. Legal values: "auto", "inherit", or a number followed by "%", "px", "em" 
+                         or any other length unit.
+
+            'flex : 1;'' for most of the browsers equivalent to 'flex: 1 1 0;' or: 
+                flex-grow : 1;      // this means that the div will grow in same proportion as the window-size
+                flex-shrink : 1;    // this means that the div will shrink in same proportion as the window-size 
+                flex-basis : 0;     // this means that the div does not have a starting value as such and will take 
+                                    // up screen as per the screen size available for.e.g:- if 3 divs are in the 
+                                    // wrapper then each div will take 33%.
+
+            See: https://css-tricks.com/almanac/properties/f/flex/
+            */
             @media all and (min-width: 600px) {
                 .aside {
                     flex: 1 0 0;
