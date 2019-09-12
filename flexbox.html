@@ -4,18 +4,30 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>Flexbox</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
         <style>
             :root {
                 --highlite-color: orange;
             }
 
             body {
-                background-color: #1f1f1f;
+                font-family: "Roboto", sans-serif;
+                background-color: #505050;
             }
 
             h1 {
+                font-size: 2.8em;
+                font-weight: normal;
                 color: var(--highlite-color);
+                margin-bottom: 0px;
+            }
+
+            h2 {
+                font-weight: normal;
             }
 
             .fl_row_wrap {
@@ -30,16 +42,20 @@
                 display: flex;
                 margin-right: 10px;
                 margin-bottom: 10px;
+                border-radius: 10px;
             }
 
+            /* Note: Set margin to `auto` in a flex container absorb extra space */
             .box-size {
                 height: 300px;
                 width: 300px;
+                border-radius: 10px;
             }
 
             .container > div {
                 width: 100px;
                 height: 100px;
+                border-radius: 10px;
                 border: 1px solid grey;
                 margin: 5px;
             }
@@ -81,6 +97,12 @@
                 font-size: 15px;
             }
 
+            .collapsible {
+                /* customization */
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+
             /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
             .active,
             .collapsible:hover {
@@ -100,6 +122,67 @@
                 height: 0.5em;
             }
 
+            /* mobile-first 3-columns layout with full-width header and footer */
+            .wrapper {
+                display: flex;
+                flex-flow: row wrap;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .wrapper > * {
+                padding: 10px;
+                flex: 1 100%;
+            }
+
+            .header {
+                background: tomato;
+            }
+
+            .footer {
+                background: lightgreen;
+            }
+
+            .main {
+                text-align: left;
+                background: deepskyblue;
+            }
+
+            .aside-1 {
+                background: gold;
+            }
+
+            .aside-2 {
+                background: hotpink;
+            }
+
+            @media all and (min-width: 600px) {
+                .aside {
+                    flex: 1 0 0;
+                }
+            }
+
+            @media all and (min-width: 800px) {
+                .main {
+                    flex: 3 0px;
+                }
+                .aside-1 {
+                    order: 1;
+                }
+                .main {
+                    order: 2;
+                }
+                .aside-2 {
+                    order: 3;
+                }
+                .footer {
+                    order: 4;
+                }
+            }
+
+            body {
+                padding: 2em;
+            }
         </style>
     </head>
     <body>
@@ -140,8 +223,7 @@
                 <div class="c3"></div>
             </div>
         </div>
-    </div>
-    <div class="separator"></div>
+        <div class="separator"></div>
 
         <button class="collapsible">Justify content</button>
         <div class="collapsible-content">
@@ -203,6 +285,64 @@
                 <div class="c1"></div>
                 <div class="c2"></div>
                 <div class="c3"></div>
+            </div>
+        </div>
+        <div class="separator"></div>
+
+        <button class="collapsible">Justify content</button>
+        <div class="collapsible-content">
+            <h2><um>order</um> usage (items 2 and 3 are swapped)</h2>
+            <div class="container c6 fl_row_nowrap">
+                <div class="c1"></div>
+                <div class="c2" style="order:3"></div>
+                <div class="c3" style="order:2"></div>
+            </div>
+
+            <h2><um>flex-grow</um> usage</h2>
+            <div class="container c6 fl_row_nowrap">
+                <div class="c1"></div>
+                <div class="c2" style="flex-grow:2"></div>
+                <div class="c3" style="flex-grow:3;"></div>
+            </div>
+
+            <h2><um>flex-shrink</um> usage</h2>
+            <div class="container c6 fl_row_nowrap" style="width: 250px;">
+                <div class="c1" style="flex-shrink:20"></div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+
+            <h2><um>flex-self</um> alignment</h2>
+            <div
+                class="container box-size fl_row_nowrap c6"
+                style="align-items: flex-start;"
+            >
+                <div class="c1" style="align-self: flex-end;"></div>
+                <div class="c2" style="align-self: center;"></div>
+                <div class="c3"></div>
+            </div>
+        </div>
+        <div class="separator"></div>
+
+        <button class="collapsible">
+            Mobile-first 3-columns layout with full-width header and footer
+        </button>
+        <div class="collapsible-content">
+            <div class="wrapper">
+                <header class="header">Header</header>
+                <article class="main">
+                    <p>
+                        Pellentesque habitant morbi tristique senectus et netus
+                        et malesuada fames ac turpis egestas. Vestibulum tortor
+                        quam, feugiat vitae, ultricies eget, tempor sit amet,
+                        ante. Donec eu libero sit amet quam egestas semper.
+                        Aenean ultricies mi vitae est. Mauris placerat eleifend
+                        leo.
+                    </p>
+                </article>
+                <aside class="aside aside-1">Aside 1</aside>
+                <aside class="aside aside-2">Aside 2</aside>
+                <footer class="footer">Footer</footer>
             </div>
         </div>
         <div class="separator"></div>
