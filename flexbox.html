@@ -18,11 +18,11 @@
                 color: var(--highlite-color);
             }
 
-            fl_row {
-                flex-flow: row;
+            .fl_row_wrap {
+                flex-flow: row wrap;
             }
 
-            fl_row_nowrap {
+            .fl_row_nowrap {
                 flex-flow: row nowrap;
             }
 
@@ -103,6 +103,8 @@
         </style>
     </head>
     <body>
+        <!-- See https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+
         <h1 style="text-align: center">Flexbox</h1>
         <hr />
 
@@ -138,7 +140,8 @@
                 <div class="c3"></div>
             </div>
         </div>
-        <div class="separator"></div>
+    </div>
+    <div class="separator"></div>
 
         <button class="collapsible">Justify content</button>
         <div class="collapsible-content">
@@ -205,13 +208,11 @@
         <div class="separator"></div>
 
         <script>
-            var coll = document.getElementsByClassName("collapsible");
-            var i;
-
-            for (i = 0; i < coll.length; i++) {
+            const coll = document.getElementsByClassName("collapsible");
+            for (let i = 0; i < coll.length; i++) {
                 coll[i].addEventListener("click", function() {
                     this.classList.toggle("active");
-                    var content = this.nextElementSibling;
+                    let content = this.nextElementSibling;
                     if (content.style.display === "block") {
                         content.style.display = "none";
                     } else {
