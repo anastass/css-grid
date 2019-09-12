@@ -23,6 +23,11 @@
                 height: 100px;
             }
 
+            .grid_system div {
+              margin-top: 20px;
+              border: 1px solid grey;
+            }
+
             #label {
                 background: #ffffbf;
                 color: grey;
@@ -43,7 +48,7 @@
             }
             @media (min-width: 768px) {
                 body {
-                    background: lightgreen;
+                    background: #b1ffb1;
                 }
             }
             @media (min-width: 992px) {
@@ -59,7 +64,7 @@
 
             @media (max-width: 575px) {
                 body {
-                    background: grey;
+                    background: #c1adea;
                 }
             }
         </style>
@@ -69,6 +74,7 @@
 
         <h1 class="text-center display-3 my-2">Rows and Columns</h1>
 
+        <!-- Rows and columns -->
         <div class="container">
             <div class="row">
                 <div class="myCell col bg-success"></div>
@@ -80,6 +86,41 @@
                 <div class="myCell col bg-info"></div>
             </div>
         </div>
+
+        <!-- Grid system -->
+        <section class="container grid_system">
+          <section class="row">
+            <div class="col-12">x12</div>
+            <div class="col-6">x6</div>
+            <div class="col-6">x6</div>
+            <div class="col-4">x4</div>
+            <div class="col-4">x4</div>
+            <div class="col-4">x4</div>
+            <div class="col-3">x3</div>
+            <div class="col-3">x3</div>
+            <div class="col-3">x3</div>
+            <div class="col-3">x3</div>
+            <div class="col-2">x2</div>
+            <div class="col-2">x2</div>
+            <div class="col-2">x2</div>
+            <div class="col-2">x2</div>
+            <div class="col-2">x2</div>
+            <div class="col-2">x2</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+            <div class="col-1">x1</div>
+          </section>
+        </section>
+
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
