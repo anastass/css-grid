@@ -4,130 +4,60 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
+        <title>CSS Case Studies</title>
         <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="css/main.css" />
+        <style>
+            :root {
+                --color-links: grey;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            /* dashed list */
+            ul li:before {
+                content: "-";
+                position: absolute;
+                margin-left: -15px;
+            }
+
+            ul li a {
+                color: var(--color-links);
+                text-decoration: none;
+                font-size: 1.2em;
+            }
+
+            ul li a:hover {
+                text-decoration: underline;
+            }
+        </style>
     </head>
     <body>
-        <div class="sidebar">
-            <p>Some Information here</p>
-        </div>
-        <div id="main">
-            <header>
-                <a href="#" id="logo">ImportantCo</a>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <section id="hero">
-                <div id="content">
-                    <h1>Sensible Solutions</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam justo neque, ullamcorper a lorem a, imperdiet
-                        ultrices elit. Curabitur vitae mattis metus, sed commodo
-                        purus. Donec blandit eu sem id faucibus. Aenean faucibus
-                        urna eu risus sollicitudin, quis vulputate arcu
-                        bibendum. Aenean porta enim massa, non lacinia magna
-                        ornare ac. Sed leo neque, consectetur sit amet convallis
-                        vitae, mattis eu lectus.
-                    </p>
-                </div>
-                <div id="mountain">
-                    <img src="./images/mountain.jpeg" alt="mountain" />
-                </div>
-            </section>
-
-            <section id="info">
-                <div id="content2">
-                    <h2>Reinvention</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam justo neque, ullamcorper a lorem a, imperdiet
-                        ultrices elit. Curabitur vitae mattis metus, sed commodo
-                        purus. Donec blandit eu sem id faucibus. Aenean faucibus
-                        urna eu risus sollicitudin, quis vulputate arcu
-                        bibendum. Aenean porta enim massa, non lacinia magna
-                        ornare ac. Sed leo neque, consectetur sit amet convallis
-                        vitae, mattis eu lectus. Duis in venenatis dolor.
-                    </p>
-                </div>
-                <img
-                    src="./images/mountain.svg"
-                    alt="mountain"
-                    id="mountain-vector"
-                />
-            </section>
-
-            <ul id="features">
-                <li>
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Fusce vulputate est massa, viverra tristique enim
-                        faucibus at. Nulla finibus interdum ex eget malesuada.
-                        Morbi ut sapien odio.
-                    </p>
-                </li>
-                <li>
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
-                    <p>
-                        Etiam quis volutpat purus. Nulla facilisi. Suspendisse
-                        et convallis elit. Suspendisse interdum nibh et quam
-                        tempor molestie. Morbi efficitur enim at bibendum
-                        dictum. Aenean at aliquet velit, sit amet maximus elit.
-                        Nam imperdiet viverra nunc, ut malesuada quam dictum
-                        sed.
-                    </p>
-                </li>
-                <li>
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Fusce vulputate est massa, viverra tristique enim
-                        faucibus at. Nulla finibus interdum ex eget malesuada.
-                        Morbi ut sapien odio. Morbi ornare, nulla at cursus
-                        gravida, diam massa gravida enim, vitae condimentum mi
-                        mauris et odio.
-                    </p>
-                </li>
-                <li>
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
-                    <p>
-                        Donec vulputate pulvinar felis, non scelerisque nunc
-                        condimentum porta. Ut consectetur justo vel facilisis
-                        semper. Aliquam erat volutpat. Nam in est interdum,
-                        posuere est ut, blandit sem. Sed et eros ac ex gravida
-                        auctor. Nunc efficitur feugiat turpis, eget porta ex
-                        semper ut.
-                    </p>
-                </li>
-                <li>
-                    <i class="fa fa-id-card" aria-hidden="true"></i>
-                    <p>
-                        Interdum et malesuada fames ac ante ipsum primis in
-                        faucibus. Aenean bibendum tristique sollicitudin.
-                        Quisque ut facilisis risus. Suspendisse hendrerit nulla
-                        consequat interdum fermentum. Nullam id pharetra libero,
-                        a suscipit leo.
-                    </p>
-                    <p></p>
-                </li>
-            </ul>
-        </div>
-        <footer>
-            <p>My footer bar</p>
-        </footer>
+        <h1>CSS Case Studies</h1>
+        <hr />
+        <ul>
+            <li>
+                <a href="./css-grid.html">Sensible Solution web site</a>
+            </li>
+            <li>
+                <a href="./playground.html">Responsive page with CSSGrid</a>
+            </li>
+            <li>
+                <a href="./positioning.html">Float, plex, grid, positioning</a>
+            </li>
+            <li>
+                <a href="./positioning1.html">Understanding CSS Positioning</a>
+            </li>
+            <li><a href="./alignment.html">CSSGrid alignment (items)</a></li>
+            <li><a href="./alignment1.html">CSSGrid alignment (content)</a></li>
+            <li><a href="./bootstrap-demo.html">Bootstrap case study</a></li>
+            <li><a href="./flexbox.html">Flexbox</a></li>
+        </ul>
     </body>
 </html>
